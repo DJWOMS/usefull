@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  back:
+    build: ./
+    command: bash enntrypoint.sh
+    #  sh -c "python manage.py migrate && daphne -b 0.0.0.0 -p 8000 config.asgi:application"
+    #  sh -c "python manage.py migrate && uvicorn config.asgi:application --host 0.0.0.0 --port 8000 --reload"
+    # sh -c "python manage.py migrate && daphne -b 0.0.0.0 -p 8000 config.asgi:application"
+    #
+    #      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+      - redis-server
+
+  db:
+    image: postgres:12
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.dev
+    ports:
+      - 5432:5432
+
+  redis-server:
+    image: "redis"
+    command: redis-server
+    ports:
+      - 6379:6379
+#    env_file:
+#      - ./.env.dev
+
+volumes:
+  postgres_data:

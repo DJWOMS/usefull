@@ -1,0 +1,329 @@
+[
+  {
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+      "username": "username1"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+      "username": "username2"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 3,
+    "fields": {
+      "username": "username3"
+    }
+  },
+  {
+    "model": "profiles.technology",
+    "pk": 1,
+    "fields": {
+      "name": "Django"
+    }
+  },
+  {
+    "model": "profiles.technology",
+    "pk": 2,
+    "fields": {
+      "name": "JavaScript"
+    }
+  },
+  {
+    "model": "profiles.technology",
+    "pk": 3,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "course.category",
+    "pk": 1,
+    "fields": {
+      "name": "Python",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.category",
+    "pk": 2,
+    "fields": {
+      "name": "Django",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.category",
+    "pk": 3,
+    "fields": {
+      "name": "HTML",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.category",
+    "pk": 4,
+    "fields": {
+      "name": "JS",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.course",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Введение в джанго",
+      "description": "Введение в джанго",
+      "create_date": "2020-11-30 22:22",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.course",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Django forms",
+      "description": "Django forms",
+      "create_date": "2020-09-02 11:22",
+      "is_publish": true
+    }
+  },
+  {
+    "model": "course.course",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Основы HTML",
+      "description": "Основы HTML",
+      "create_date": "2021-01-01 05:22",
+      "is_publish": false
+    }
+  },
+  {
+    "model": "course.author",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "course": 1
+    }
+  },
+  {
+    "model": "course.author",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "course": 2
+    }
+  },
+  {
+    "model": "course.author",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "course": 3
+    }
+  },
+  {
+    "model": "course.lesson",
+    "pk": 1,
+    "fields": {
+      "course": 3,
+      "name": "DIV",
+      "image": null,
+      "create_date": "2020-07-22 09:30",
+      "is_publish": true,
+      "text": "sdgdagfvhsgf"
+    }
+  },
+  {
+    "model": "course.lesson",
+    "pk": 2,
+    "fields": {
+      "course": 3,
+      "name": "tag a",
+      "image": null,
+      "create_date": "2020-04-30 10:22",
+      "is_publish": true,
+      "text": "sdfgfhfghsgf   dfhgf hfgd fsdh s"
+    }
+  },
+  {
+    "model": "course.lesson",
+    "pk": 3,
+    "fields": {
+      "course": 2,
+      "name": "Auth django",
+      "image": null,
+      "create_date": "2020-01-28 10:22",
+      "is_publish": true,
+      "text": "Каким-то образом он authenticate() должен проверить данные аутентификации, которые он получает, и в случае, если эти данные действительны, он должен вернуть объект пользователя, соответствующий этим данным. В противном случае его придется отправить повторно None ."
+    }
+  },
+  {
+    "model": "course.lesson",
+    "pk": 4,
+    "fields": {
+      "course": 1,
+      "name": "Classes",
+      "image": null,
+      "create_date": "2020-10-15 19:40",
+      "is_publish": true,
+      "text": "dfhgfg"
+    }
+  },
+  {
+    "model": "course.task",
+    "pk": 1,
+    "fields": {
+      "lesson": 3,
+      "title": "title lesson 3",
+      "is_publish": true,
+      "text": "Сайт администратора Django тесно связан с объектом пользователя Django. Лучший способ справиться с этим - создать объект Django User для каждого пользователя, который существует в вашем движке (например, в вашем каталоге LDAP, вашей внешней базе данных SQL и т. Д.). Вы можете написать сценарий, чтобы сделать это раньше, или вы можете делегировать authenticate создание объекта своему методу User при каждом первом подключении."
+    }
+  },
+  {
+    "model": "course.task",
+    "pk": 2,
+    "fields": {
+      "lesson": 1,
+      "title": "title for lesson 1",
+      "is_publish": true,
+      "text": "request является объектом HttpRequest и может быть действительным, None если он не был предоставлен authenticate() (который перенаправляет его в механизм аутентификации).."
+    }
+  },
+  {
+    "model": "course.realizationtask",
+    "pk": 1,
+    "fields": {
+      "task": 1,
+      "user": 1,
+      "answer": "Готовое задание",
+      "comment": "comment to dgdf",
+      "success": true,
+      "create_date": "2020-05-15 21:40"
+    }
+  },
+  {
+    "model": "course.realizationtask",
+    "pk": 2,
+    "fields": {
+      "task": 2,
+      "user": 1,
+      "answer": "Готовое задание gdgaf",
+      "comment": "comment 243242",
+      "success": true,
+      "create_date": "2020-10-15 05:41"
+    }
+  },
+  {
+    "model": "course.students",
+    "pk": 1,
+    "fields": {
+      "course": 2,
+      "user": 3
+    }
+  },
+  {
+    "model": "course.students",
+    "pk": 2,
+    "fields": {
+      "course": 1,
+      "user": 2
+    }
+  },
+  {
+    "model": "course.students",
+    "pk": 3,
+    "fields": {
+      "course": 3,
+      "user": 1
+    }
+  },
+  {
+    "model": "course.comment",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "lesson": 1,
+      "parent": null,
+      "text": "dfhgfg",
+      "create_date": "2020-10-15 19:40",
+      "update_date": "2020-10-15 19:40",
+      "is_delete": false
+    }
+  },
+  {
+    "model": "course.comment",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "lesson": 1,
+      "parent": 1,
+      "text": "dвижок мог реализовать разрешения для \"волшебного\" администратора следующим образом:",
+      "create_date": "2020-11-22 19:42",
+      "update_date": "2020-10-15 19:40",
+      "is_delete": false
+    }
+  },
+  {
+    "model": "course.comment",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "lesson": 2,
+      "parent": null,
+      "text": " волшебного администратора следующим образом:",
+      "create_date": "2020-12-17 19:42",
+      "update_date": "2020-10-15 19:40",
+      "is_delete": true
+    }
+  },
+  {
+    "model": "course.comment",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "lesson": 3,
+      "parent": null,
+      "text": " волшебного администратора образом:",
+      "create_date": "2020-03-03 19:52",
+      "update_date": "2020-10-15 19:40",
+      "is_delete": true
+    }
+  },
+  {
+    "model": "support.category",
+    "pk": 1,
+    "fields": {
+      "name": "Design"
+    }
+  },
+  {
+    "model": "support.category",
+    "pk": 2,
+    "fields": {
+      "name": "Functionality"
+    }
+  },
+  {
+    "model": "support.category",
+    "pk": 3,
+    "fields": {
+      "name": "Team"
+    }
+  },
+  {
+    "model": "support.category",
+    "pk": 3,
+    "fields": {
+      "name": "Project"
+    }
+  }
+]
